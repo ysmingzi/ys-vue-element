@@ -6,8 +6,11 @@ import router from './router'
 import store from './store/index'
 import element from 'element-ui'
 import "element-ui/lib/theme-chalk/index.css";
+import {get} from './utils/axios'
 Vue.use(element)
 Vue.config.productionTip = false
+
+console.log('13',get )
 
 // 全局守卫  权限
 router.beforeEach((to, from, next) => {

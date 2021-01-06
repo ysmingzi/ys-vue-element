@@ -10,8 +10,16 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
-
+    proxyTable: {
+      '/api': {
+        target: 'http://yangsen.com',
+        changeOrigin: true,
+        secure:false,// 如果是https接口，需要配置这个参数为true`
+        pathRewrite: {
+          '^/api': '/api' // 路径重写，为匹配后端的接口路径
+        }
+      }
+    },
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
