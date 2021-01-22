@@ -51,7 +51,7 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate(valid => {
         if (valid) {
-          this.$message("注册成功");
+          this.$toast("注册成功");
           localStorage.setItem("myInfo", JSON.stringify(this.formLabelAlign));
           localStorage.setItem("token", "yangsendemo");
           this.$router.push("/lagout");

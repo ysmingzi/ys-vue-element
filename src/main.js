@@ -6,7 +6,14 @@ import router from './router'
 import store from './store/index'
 import element from 'element-ui'
 import "element-ui/lib/theme-chalk/index.css";
-import {get} from './utils/axios'
+import { get } from './utils/axios'
+import Toast from '@/components/Toast/toast'
+import '@/components/Toast/toast.css'
+
+// 自定义插件
+Vue.use(Toast)
+
+
 Vue.use(element)
 Vue.config.productionTip = false
 

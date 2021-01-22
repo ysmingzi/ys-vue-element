@@ -11,12 +11,12 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/api': {
-        target: 'http://yangsen.com',
+      '/v1': {
+        target: 'http://10.0.10.41:9960',
         changeOrigin: true,
         secure:false,// 如果是https接口，需要配置这个参数为true`
         pathRewrite: {
-          '^/api': '/api' // 路径重写，为匹配后端的接口路径
+          '^/v1': '' // 路径重写，为匹配后端的接口路径
         }
       }
     },

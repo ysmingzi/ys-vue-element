@@ -28,7 +28,7 @@ export default {
       let demoData = {
         DEMO: "111213213"
       };
-      let { res } = await ysApi.ysDemoPost(demoData);
+      let { res } = await ysApi.ysDemoPost("111213213");
       if (res) {
         console.log("28", res);
       }
